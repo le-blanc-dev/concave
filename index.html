@@ -1,0 +1,21 @@
+<!doctype html> 
+<html lang= "en"> 
+<head> 
+<meta charset= "utf-8"> 
+<title>Expand textarea </title> 
+<style>
+textarea{overflow-y:scroll}
+</style>
+<script>
+onload=function(){
+    var who=document.getElementsByName('comments')[0];
+    who.onkeyup=function(){
+        if(who.scrollTop)who.rows=parseInt(who.rows)+5;
+    }
+}
+</script>
+</head> 
+<body>
+<textarea name="comments" cols="50" rows="5"></textarea> 
+</body> 
+</html> 
